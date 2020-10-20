@@ -20,7 +20,7 @@ When in the directory, search and install for `grpc` and `protobufs`. You may fi
 ./vcpkg search grpc
 ./vcpkg install grpc && ./vcpkg install protobuf
 ```
-Once install you may run `./vcpkg list` to list all the packages that have successfully installed.
+Once installed you can run `./vcpkg list` to ensure all the packages have successfully installed.
 
 #### 1.3 Vcpkg user-wide install
 Next we will expose the installed packages to our project. From vcpkg's documentation "the recommended and most productive way to use vcpkg is via user-wide integration, making the system available for all projects you build. The user-wide integration will prompt for administrator access the first time it is used on a given machine, but afterwards is no longer required and the integration is configured on a per-user basis." ['- vcpkg documentation'](https://vcpkg.readthedocs.io/en/latest/examples/installing-and-using-packages/).

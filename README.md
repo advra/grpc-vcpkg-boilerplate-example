@@ -4,7 +4,7 @@
 grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build off of.
 
 ### 1. Pre-Environment Setup
-This project requires `vcpkg a package manager` to already be installed. VCPKG is used to manage your packages dependencies for projects like Protobufs and gRPC. If you already have vcpkg manager installed then continue to `2. How to Use` otherwise continuing reading on.
+This project requires `vcpkg` a package manager to be installed. VCPKG is used to manage your packages dependencies for projects like Protobufs and gRPC. If you already have vcpkg manager installed then continue to `2. How to Use` otherwise continuing reading on.
 
 #### 1.1 Installing vcpkg
 Running the following commands to clone and install vcpkg in the current directory.

@@ -1,4 +1,4 @@
-# Boilerplate GRPC's Hello World With VCPKG
+# Boilerplate gRPC vcpkg Hello World Exmaple
 
 ### 0. Purpose
 grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build off of.

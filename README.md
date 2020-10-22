@@ -1,7 +1,7 @@
 # Boilerplate Hello World gRPC Example with Vcpkg Manager
 
 ## 0. Purpose
-grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build off of.
+grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build upon from.
 
 ## 1. Pre-Environment Setup
 This project requires `vcpkg` a package manager to be installed. VCPKG is used to manage your packages dependencies for projects like Protobufs and gRPC. If you already have vcpkg manager installed then continue to `2. Compile` otherwise continuing reading on.
@@ -27,7 +27,7 @@ Next we will expose the installed packages to our project. From vcpkg's document
 ```
 ./vcpkg integrate install
 ```
-Running command will output the path which we need to supply to cmake each time we build with a project. Take note of the `DCMAKE_TOOLCHAIN_FILE` flag as we will use this later in `2. Copmile`.
+Running command will output the path which we need to supply to cmake each time we build with a project. Take note of the `DCMAKE_TOOLCHAIN_FILE` flag as we will use this later in `2. Compile`.
 ```
 aa@ubuntu:~/vcpkg$ ./vcpkg integrate install
 Applied user-wide integration for this vcpkg root.

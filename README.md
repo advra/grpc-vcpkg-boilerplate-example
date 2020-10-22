@@ -66,11 +66,11 @@ If you get an error when running cmake.. such as below you may need to target yo
 ```
 Here are some targets for your OS:
 
-windows: `-DVCPKG_TARGET_TRIPLET=x86-windows`
+windows: `cmake -DVCPKG_TARGET_TRIPLET=x86-windows ..`
 
 linux: `cmake -DVCPKG_TARGET_TRIPLET=x64-linux ..`
 
-raspberrypi: `-DVCPKG_TARGET_TRIPLET=arm-linux`
+raspberrypi: `cmake -DVCPKG_TARGET_TRIPLET=arm-linux ..`
 
 ### 3. Run
 You can find our compiled binaries in `build/src`. Start up the server with `./greeter_server` to begin listening for connections. Then open another terminal to and run  `./greeter_client` and/or `./greeter_client2`. Similarly, you can run the asynchronous examples with `./greeter_async_server` and `./greeter_async_client` in seperate terminals. 

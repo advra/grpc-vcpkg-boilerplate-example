@@ -4,7 +4,7 @@
 grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build upon from.
 
 ## 1. Pre-Environment Setup
-This project requires `vcpkg` a package manager to be installed. VCPKG is used to manage your packages dependencies for projects like Protobufs and gRPC. If you already have vcpkg manager installed then continue to `2. Compile` otherwise continuing reading on.
+This project requires `vcpkg` a package manager to be installed. VCPKG is used to manage your packages dependencies for projects like Protobufs and gRPC. If you already have vcpkg manager installed then continue to ['2. Compile'](https://github.com/advra/grpc-vcpkg-boilerplate-example/blob/main/README.md#2-compile) otherwise continuing reading on.
 
 ### 1.1 Installing vcpkg
 Running the following commands to clone and install vcpkg in the current directory.
@@ -23,7 +23,7 @@ When in the directory, search and install for `grpc` and `protobufs`. You may fi
 Once installed you can run `./vcpkg list` to ensure all the packages have successfully installed.
 
 ### 1.3 Vcpkg user-wide install
-Next we will expose the installed packages to our project. From vcpkg's documentation "the recommended and most productive way to use vcpkg is via user-wide integration, making the system available for all projects you build. The user-wide integration will prompt for administrator access the first time it is used on a given machine, but afterwards is no longer required and the integration is configured on a per-user basis." ['- vcpkg documentation'](https://vcpkg.readthedocs.io/en/latest/examples/installing-and-using-packages/).
+Next we will expose the installed packages to our project. From vcpkg's documentation "the recommended and most productive way to use vcpkg is via user-wide integration, making the system available for all projects you build. The user-wide integration will prompt for administrator access the first time it is used on a given machine, but afterwards is no longer required and the integration is configured on a per-user basis." ['(Source: Vcpkg Documentation)'](https://vcpkg.readthedocs.io/en/latest/examples/installing-and-using-packages/).
 ```
 ./vcpkg integrate install
 ```

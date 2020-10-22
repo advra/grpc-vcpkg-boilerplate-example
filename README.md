@@ -50,12 +50,24 @@ Update `$VCPKG_HOME` defined in the CMakelist.txt (located at the root) to match
 ```
 set (VCPKG_HOME "$ENV{HOME}/vcpkg")
 ```
-Once set we can then build the project and pass the `DCMAKE_TOOLCHAIN_FILE` direction pointing to our VCPKG's cmake previously installed. Note: For windows users you may need to set the following: `-DVCPKG_TARGET_TRIPLET=x86-windows`
+Once set we can then build the project and pass the `DCMAKE_TOOLCHAIN_FILE` direction pointing to our VCPKG's cmake previously installed. 
 ```
 mkdir build && cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=/home/aa/vcpkg/scripts/buildsystems/vcpkg.cmake
 make
 ```
+If you get an error when running cmake.. such as below you may need to target your appropriate OS with `-DVCPKG_TARGET_TRIPLET`.
+```
+  Could not find a package configuration file provided by "gRPC" with any of
+  the following names:
+
+    gRPCConfig.cmake
+    grpc-config.cmake
+```
+Here are some targets for your OS:
+windows: `-DVCPKG_TARGET_TRIPLET=x86-windows`
+linux: `cmake -DVCPKG_TARGET_TRIPLET=x64-linux ..`
+raspberrypi: `-DVCPKG_TARGET_TRIPLET=arm-linux`
 
 ### 3. Run
 You can find our compiled binaries in `build/src`. Start up the server with `./greeter_server` to begin listening for connections. Then open another terminal to and run  `./greeter_client` and/or `./greeter_client2`. Similarly, you can run the asynchronous examples with `./greeter_async_server` and `./greeter_async_client` in seperate terminals. 

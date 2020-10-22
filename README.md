@@ -65,8 +65,11 @@ If you get an error when running cmake.. such as below you may need to target yo
     grpc-config.cmake
 ```
 Here are some targets for your OS:
+
 windows: `-DVCPKG_TARGET_TRIPLET=x86-windows`
+
 linux: `cmake -DVCPKG_TARGET_TRIPLET=x64-linux ..`
+
 raspberrypi: `-DVCPKG_TARGET_TRIPLET=arm-linux`
 
 ### 3. Run

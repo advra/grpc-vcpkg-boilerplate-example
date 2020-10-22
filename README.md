@@ -1,4 +1,4 @@
-# Boilerplate gRPC vcpkg Hello World Exmaple
+# Boilerplate Hello World gRPC Example with Vcpkg Manager
 
 ### 0. Purpose
 grpc is a high performance open source rpc framework. They recommend users to install gRPC natively. Over the years this method has slowly been deprecated. While they recommend other methods such as vcpkg, their examples are not exactly plug and play. This is an attempt to try and provide examples which work with `vcpkg` manager and provide boilerplate example which you can build off of.
@@ -48,6 +48,8 @@ This package assumes you have `vcpkg` located at your `$HOME/vcpkg`. If it is lo
 set (VCPKG_HOME "$ENV{HOME}/vcpkg")
 ```
 Once the `VCPKG_HOME` variable is set, we can then build the project and pas the `DCMAKE_TOOLCHAIN_FILE` direction pointing to our VCPKG's cmake previously installed.
+
+Note: For windows users you may need to set the following: `-DVCPKG_TARGET_TRIPLET=x86-windows`
 ```
 mkdir build && cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=/home/aa/vcpkg/scripts/buildsystems/vcpkg.cmake
